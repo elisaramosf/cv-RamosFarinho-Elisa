@@ -1,29 +1,29 @@
-/* Variables de Impacto Vibrante (Azul y Turquesa Potentes) */
+/* English Variables */
 :root {
-    --color-azul: #1e3a8a; /* Azul Marino Principal */
-    --color-turquesa: #2dd4bf; /* Turquesa Brillante Decorativo */
-    --color-azul-hover: #1d4ed8;
-    --color-oscuro: #0f172a;
-    --color-fondo: #f8fafc; /* Fondo claro para contraste */
-    --fuente-nombre: 'Playfair Display', serif;
-    --fuente-texto: 'Poppins', sans-serif;
-    --gradiente-vibrante: linear-gradient(135deg, var(--color-azul), var(--color-turquesa));
+    --main-blue: #1e3a8a;
+    --bright-turquoise: #2dd4bf;
+    --hover-blue: #1d4ed8;
+    --dark-bg: #0f172a;
+    --light-bg: #f8fafc;
+    --header-font: 'Playfair Display', serif;
+    --main-font: 'Poppins', sans-serif;
+    --vibrant-gradient: linear-gradient(135deg, var(--main-blue), var(--bright-turquoise));
 }
 
 body {
-    font-family: var(--fuente-texto);
-    background-color: var(--color-fondo);
+    font-family: var(--main-font);
+    background-color: var(--light-bg);
     margin: 0;
     color: #1f2937;
-    scroll-behavior: smooth; /* Desplazamiento suave */
+    scroll-behavior: smooth;
 }
 
-/* Barra de Navegación Agrandada con Fondo Degradado Turquesa/Azul */
-.barra-navegacion {
+/* Navbar */
+.navbar {
     position: sticky;
     top: 0;
-    background: linear-gradient(90deg, var(--color-oscuro), #111e3b);
-    padding: 1.8rem; /* Padding extra */
+    background: linear-gradient(90deg, var(--dark-bg), #111e3b);
+    padding: 1.8rem;
     display: flex;
     justify-content: center;
     gap: 15px;
@@ -31,7 +31,7 @@ body {
     box-shadow: 0 4px 15px rgba(0,0,0,0.3);
 }
 
-.btn-nav, .btn-pdf {
+.nav-btn, .pdf-btn {
     padding: 10px 22px;
     border: none;
     border-radius: 8px;
@@ -41,175 +41,167 @@ body {
     transition: 0.3s ease-in-out;
 }
 
-.btn-nav {
+.nav-btn {
     background: white;
-    color: var(--color-oscuro);
+    color: var(--dark-bg);
 }
 
-.btn-nav:hover {
-    background: var(--gradiente-vibrante); /* Hover con degradado */
+.nav-btn:hover {
+    background: var(--vibrant-gradient);
     color: white;
     transform: translateY(-2px);
 }
 
-.btn-pdf {
-    background: #ef4444; /* Rojo para PDF */
+.pdf-btn {
+    background: #ef4444;
     color: white;
 }
 
-/* Encabezado Vibrante (Nombre GIGANTE y PERFECTAMENTE CENTRADO) */
-.encabezado-vibrante {
-    padding: 160px 20px; /* Mucho espacio */
+/* Header */
+.vibrant-header {
+    padding: 100px 20px;
     text-align: center;
     background-color: white;
     position: relative;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centrado horizontal */
-    justify-content: center;
-    box-shadow: 0 5px 25px rgba(0,0,0,0.05);
+    align-items: center;
 }
 
-.decoracion-superior-vibrante {
+.top-decoration {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 15px; /* Barra decorativa superior */
-    background: var(--gradiente-vibrante);
+    height: 15px;
+    background: var(--vibrant-gradient);
 }
 
-.nombre-gigante-centrado {
-    font-family: var(--fuente-nombre);
-    font-size: 6rem; /* ¡Nombre gigante! */
-    margin: 0 0 15px 0;
-    text-transform: capitalize;
-    background: var(--gradiente-vibrante); /* Texto con degradado */
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid var(--bright-turquoise);
+    margin-bottom: 20px;
+}
+
+.giant-centered-name {
+    font-family: var(--header-font);
+    font-size: 5rem;
+    margin: 0;
+    background: var(--vibrant-gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    display: inline-block;
 }
 
-.subtitulo-vibrante {
+.vibrant-subtitle {
     color: #64748b;
-    font-size: 1.6rem;
-    margin-bottom: 50px;
-    font-weight: 300;
-}
-
-.bio-contenedor-vibrante {
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.descripcion-personal-vibrante {
-    line-height: 1.9; /* Más espacio entre líneas */
-    color: #475569;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     margin-bottom: 40px;
 }
 
-/* Botón GitHub Decorado Turquesa/Azul */
-.btn-github-vibrante {
+.bio-container {
+    max-width: 800px;
+}
+
+.personal-bio {
+    line-height: 1.9;
+    color: #475569;
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.github-btn {
     display: inline-block;
-    background: var(--gradiente-vibrante);
+    background: var(--vibrant-gradient);
     color: white;
     padding: 14px 32px;
     border-radius: 50px;
     text-decoration: none;
     font-weight: 600;
-    font-size: 1.1rem;
-    transition: 0.3s;
     box-shadow: 0 4px 15px rgba(45, 212, 191, 0.4);
 }
 
-.btn-github-vibrante:hover {
-    transform: translateY(-3px) scale(1.05);
-    box-shadow: 0 6px 20px rgba(45, 212, 191, 0.6);
-}
-
-/* Secciones Decoradas y Espaciadas */
-.contenedor-principal-vibrante {
-    max-width: 1100px; /* Un poco más ancho */
+/* Main Content */
+.main-container {
+    max-width: 1100px;
     margin: 0 auto;
     padding: 20px;
 }
 
-.seccion-decorada-vibrante {
-    padding: 120px 0; /* Mayor espacio entre tópicos */
+.decorated-section {
+    padding: 80px 0;
     border-bottom: 2px solid #e2e8f0;
 }
 
-.seccion-decorada-vibrante h2 { 
-    color: var(--color-azul); 
-    font-size: 3rem;
+.decorated-section h2 {
+    color: var(--main-blue);
+    font-size: 2.5rem;
     text-align: center;
-    margin-bottom: 70px;
-    position: relative;
-    display: inline-block;
-    left: 50%;
-    transform: translateX(-50%); /* Centrado perfecto del título */
+    margin-bottom: 50px;
 }
 
-/* Detalle decorativo turquesa bajo el título */
-.seccion-decorada-vibrante h2::after {
-    content: '';
-    display: block;
-    width: 80px;
-    height: 6px;
-    background: var(--color-turquesa);
-    margin: 15px auto 0;
-    border-radius: 5px;
-}
-
-/* Grilla de Skills con Iconos y Decoración Turquesa */
-.grid-skills-vibrante {
+/* Skills Grid */
+.skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 30px;
 }
 
-.skill-item-vibrante {
+.skill-item {
     background: white;
     padding: 25px;
     border-radius: 15px;
     text-align: center;
     box-shadow: 0 5px 10px rgba(0,0,0,0.05);
     font-weight: 600;
-    font-size: 1.2rem;
     border-bottom: 5px solid #e2e8f0;
     transition: 0.3s;
 }
 
-.skill-item-vibrante:hover {
-    border-bottom: 5px solid var(--color-turquesa); /* Hover Turquesa */
+.skill-item:hover {
+    border-bottom: 5px solid var(--bright-turquoise);
     transform: translateY(-8px);
-    box-shadow: 0 8px 15px rgba(45, 212, 191, 0.2);
 }
 
-.skill-item-vibrante i {
-    font-size: 3.5rem;
+.skill-item i {
+    font-size: 3rem;
     display: block;
     margin-bottom: 15px;
 }
 
-/* Tarjetas y Proyectos con Detalles Azules Vibrantes */
-.tarjeta-info-vibrante, .proyecto-vibrante {
+/* Cards */
+.info-card, .portfolio-project {
     background: white;
     padding: 40px;
     border-radius: 15px;
-    border-left: 8px solid var(--color-azul); /* Detalle Azul Marino Potente */
+    border-left: 8px solid var(--main-blue);
     box-shadow: 0 5px 15px rgba(0,0,0,0.05);
 }
 
-.tarjeta-info-vibrante h3, .proyecto-vibrante h3 { color: var(--color-azul); margin-top: 0; font-size: 1.6rem; }
+/* Form */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 650px;
+    margin: 0 auto;
+}
 
-/* Formulario Decorado Turquesa */
-.formulario-contacto-vibrante { display: flex; flex-direction: column; gap: 20px; max-width: 650px; margin: 0 auto; }
-.input-form-vibrante, .textarea-form-vibrante { padding: 18px; border: 2px solid #cbd5e1; border-radius: 10px; font-family: var(--fuente-texto); font-size: 1rem; }
-.input-form-vibrante:focus, .textarea-form-vibrante:focus { border-color: var(--color-turquesa); outline: none; box-shadow: 0 0 10px rgba(45, 212, 191, 0.3); }
-.btn-enviar-vibrante { 
-    background: var(--gradiente-vibrante);
-    color: white; padding: 18px; border: none; border-radius: 10px; cursor: pointer; font-weight: 600; font-size: 1.2rem; transition: 0.3s; }
-.btn-enviar-vibrante:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(45, 212, 191, 0.4); }
+.form-input, .form-textarea {
+    padding: 18px;
+    border: 2px solid #cbd5e1;
+    border-radius: 10px;
+    font-family: var(--main-font);
+}
+
+.submit-btn {
+    background: var(--vibrant-gradient);
+    color: white;
+    padding: 18px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1.2rem;
+}

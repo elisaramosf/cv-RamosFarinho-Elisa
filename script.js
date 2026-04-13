@@ -1,16 +1,13 @@
-// 1. Navegación fluida con Scroll Suave
-// Seleccionamos todos los botones que tienen la clase 'btn-nav'
-const botonesNav = document.querySelectorAll('.btn-nav');
+// 1. Smooth Navigation
+const navButtons = document.querySelectorAll('.nav-btn');
 
-botonesNav.forEach(boton => {
-    boton.addEventListener('click', () => {
-        // Obtenemos el ID de la sección desde el atributo data-seccion
-        const seccionId = boton.getAttribute('data-seccion');
-        const seccionDestino = document.getElementById(seccionId);
+navButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const sectionId = button.getAttribute('data-section');
+        const targetSection = document.getElementById(sectionId);
 
-        // Si la sección existe, hacemos el scroll suave
-        if (seccionDestino) {
-            seccionDestino.scrollIntoView({ 
+        if (targetSection) {
+            targetSection.scrollIntoView({ 
                 behavior: 'smooth',
                 block: 'start' 
             });
@@ -18,23 +15,22 @@ botonesNav.forEach(boton => {
     });
 });
 
-// 2. Función Save as PDF (Acción visible requerida por el TP)
-const btnPDF = document.getElementById('btnPDF');
+// 2. Save as PDF
+const pdfBtn = document.getElementById('pdfBtn');
 
-if (btnPDF) {
-    btnPDF.addEventListener('click', () => {
-        // Esta función nativa abre el menú de impresión/guardado de macOS
+if (pdfBtn) {
+    pdfBtn.addEventListener('click', () => {
         window.print();
-        console.log("Elisa: Se activó la exportación a PDF.");
+        console.log("PDF Export triggered.");
     });
 }
 
-// 3. Pequeña validación del formulario (Interactividad extra)
-const formulario = document.querySelector('.formulario-contacto-vibrante');
-if (formulario) {
-    formulario.addEventListener('submit', (e) => {
-        e.preventDefault(); // Evita que la página se recargue
-        alert("¡Merci! Tu mensaje ha sido enviado correctamente (simulado).");
-        formulario.reset();
+// 3. Simple Form Validation
+const contactForm = document.querySelector('.contact-form');
+if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        alert("¡Merci! Tu mensaje ha sido enviado correctamente.");
+        contactForm.reset();
     });
 }
