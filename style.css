@@ -3,21 +3,21 @@
     src: url('fonts/Poppins-Regular.ttf') format('truetype');
 }
 
-/* English Variables */
+/* Semantic Variables */
 :root {
-    --main-blue: #1e3a8a;
-    --bright-turquoise: #2dd4bf;
-    --hover-blue: #1d4ed8;
-    --dark-bg: #0f172a;
-    --light-bg: #f8fafc;
+    --color-primary: #1e3a8a;
+    --color-accent: #2dd4bf;
+    --color-primary-hover: #1d4ed8;
+    --bg-dark: #0f172a;
+    --bg-light: #f8fafc;
     --header-font: 'Poppins', sans-serif;
     --main-font: 'Poppins', sans-serif;
-    --vibrant-gradient: linear-gradient(135deg, var(--main-blue), var(--bright-turquoise));
+    --vibrant-gradient: linear-gradient(135deg, var(--color-primary), var(--color-accent));
 }
 
 body {
     font-family: var(--main-font);
-    background-color: var(--light-bg);
+    background-color: var(--bg-light);
     margin: 0;
     color: #1f2937;
     scroll-behavior: smooth;
@@ -27,7 +27,7 @@ body {
 .navbar {
     position: sticky;
     top: 0;
-    background: linear-gradient(90deg, var(--dark-bg), #111e3b);
+    background: linear-gradient(90deg, var(--bg-dark), #111e3b);
     padding: 1.8rem;
     display: flex;
     justify-content: center;
@@ -48,7 +48,7 @@ body {
 
 .nav-btn {
     background: white;
-    color: var(--dark-bg);
+    color: var(--bg-dark);
 }
 
 .nav-btn:hover {
@@ -86,7 +86,7 @@ body {
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    border: 5px solid var(--bright-turquoise);
+    border: 5px solid var(--color-accent);
     margin-bottom: 20px;
 }
 
@@ -141,7 +141,7 @@ body {
 }
 
 .decorated-section h2 {
-    color: var(--main-blue);
+    color: var(--color-primary);
     font-size: 2.5rem;
     text-align: center;
     margin-bottom: 50px;
@@ -166,7 +166,7 @@ body {
 }
 
 .skill-item:hover {
-    border-bottom: 5px solid var(--bright-turquoise);
+    border-bottom: 5px solid var(--color-accent);
     transform: translateY(-8px);
 }
 
@@ -181,7 +181,7 @@ body {
     background: white;
     padding: 40px;
     border-radius: 15px;
-    border-left: 8px solid var(--main-blue);
+    border-left: 8px solid var(--color-primary);
     box-shadow: 0 5px 15px rgba(0,0,0,0.05);
 }
 
