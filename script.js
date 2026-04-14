@@ -1,4 +1,3 @@
-// 1. Smooth Navigation
 const navButtons = document.querySelectorAll('.nav-btn');
 
 navButtons.forEach(button => {
@@ -15,22 +14,20 @@ navButtons.forEach(button => {
     });
 });
 
-// 2. Save as PDF
 const pdfBtn = document.getElementById('pdfBtn');
 
 if (pdfBtn) {
     pdfBtn.addEventListener('click', () => {
         window.print();
-        console.log("PDF Export triggered.");
+        console.log("Elisa: PDF export triggered.");
     });
 }
 
-// 3. Simple Form Validation
 const contactForm = document.querySelector('.contact-form');
 if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
-        alert("¡Merci! Tu mensaje ha sido enviado correctamente.");
+        alert("¡Merci! Tu mensaje ha sido enviado correctamente (simulado).");
         contactForm.reset();
     });
 }
