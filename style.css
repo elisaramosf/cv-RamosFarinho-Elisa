@@ -10,7 +10,6 @@
     --color-primary-hover: #1d4ed8;
     --bg-dark: #0f172a;
     --bg-light: #f8fafc;
-    --header-font: 'Poppins', sans-serif;
     --main-font: 'Poppins', sans-serif;
     --vibrant-gradient: linear-gradient(135deg, var(--color-primary), var(--color-accent));
 }
@@ -91,7 +90,7 @@ body {
 }
 
 .giant-centered-name {
-    font-family: var(--header-font);
+    font-family: var(--main-font);
     font-size: 5rem;
     margin: 0;
     background: var(--vibrant-gradient);
